@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    text-align: center;
+}
+
+main{
+    width: 70%;
+    margin: auto;
+    height: 100vh;
+    background-color: gray;
+    padding: 15px;
+}
+
+.table thead tr th{
+    background-color: rgb(4, 0, 71);
+    color: white;
+    font-size: larger;
+}
