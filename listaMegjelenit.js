@@ -11,18 +11,30 @@ export function htmlOsszeallit(lista) {
     </thead>
     <tbody>
     `;
-    lista.forEach(function(item, ind){
+    lista.forEach(elem => {
         let nem = "";
+        txt += "<tr>";
+        for (const kulcs in elem) {
+            // Objektumokat járhatunk be
+            console.log("kulcs: ", kulcs, elem[kulcs]);
+            txt += `<td>${elem[kulcs]}</td>`;
+        }
+        txt += "<td>🗑️</td>"
+        txt += "</tr>";
+    });
+
+    /*lista.forEach(function(item, index){
+        let nem = "";
+        txt += "<tr>";
         if (item.nem === true) nem = "Férfi";
         else nem = "Nő";
         txt += `
-        <tr>
             <th>${item.nev}</th>
             <th>${item.kor}</th>
             <th>${nem}</th>
-        </tr>
         `;
-    });
+        txt += "</tr>";
+    });*/
     txt += "</tbody><table>";
     return txt;
 }
