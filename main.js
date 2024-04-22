@@ -1,6 +1,7 @@
 import { emberLISTA } from "./adat.js";
 import { htmlOsszeallit, megjelenit } from "./listaMegjelenit.js";
 import { rendez, szures, torol } from "./adatkezelo.js";
+import { ujAdat } from "./urlapkezelo.js";
 
 /*
 
@@ -25,7 +26,7 @@ init(emberLISTA);
 szuresEsemeny();
 
 
-function init(lista) {
+export function init(lista) {
     megjelenit(htmlOsszeallit(lista));
     rendezEsemeny();
     torol();
@@ -54,13 +55,16 @@ function szuresEsemeny() {
 })
 }
 
-const tolorGOMB = $(".torol");
+const torolGOMB = $(".torol");
 torolGOMB.on("click", function(event){
     let id = event.target.id;
     console.log(id);
     const LISTA = torol(emberLISTA, id);
     init(emberLISTA);
 })
+
+ujAdat(emberLISTA);
+init(emberLISTA);
 
 
 

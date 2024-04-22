@@ -11,7 +11,7 @@ Tudjuk torolni a tablazat egy sorat
 ## Metódusok
 
 1. **htmlosszeallit(lista)->txt** | osszeallitja a tablazat html szerkezetet egy szoveges valtozoba
-2. **megjelenit(txt)** -> megjelenitette egy adott html elemben a parametereben kapott szoveget
+2. **megjelenit(txt)** | megjelenitette egy adott html elemben a parametereben kapott szoveget
 3. **rendez(lista) -> rendezettLista** | a parameterben kapott listat nev szerint rendezi, a fuggveny akkor fut le ha a tablazat nev fejlecere kattintunk
 4. **adatHozzaadas(lista) -> kibovitettLista** | osszegyujti az urlaprol az adatokat es osszeallit beloluk egy objektumot, majd azt beleteszi a listaba -> a fuggveny akkor fut le ha rakattintunk a submit gombra
 5. **torol(lista, id) -> tLista** | kitorli a listabol a kattintott id-s elemet -> Akkor fog lefutni, ha a sor melletti torol gombra kattintunk

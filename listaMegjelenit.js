@@ -7,19 +7,20 @@ export function htmlOsszeallit(lista) {
             <th>Név</th>
             <th>Kor</th>
             <th>Nem</th>
+            <th>Törlés</th>
         </tr>
     </thead>
     <tbody>
     `;
-    lista.forEach(elem => {
+    lista.forEach((elem, ind)=> {
         let nem = "";
         txt += "<tr>";
         for (const kulcs in elem) {
             // Objektumokat járhatunk be
-            console.log("kulcs: ", kulcs, elem[kulcs]);
+            // console.log("kulcs: ", kulcs, elem[kulcs]);
             txt += `<td>${elem[kulcs]}</td>`;
-        }
-        txt += "<td>🗑️</td>"
+        } 
+        txt += `<td class="torol" id="${ind}">🗑️</td>`;
         txt += "</tr>";
     });
 

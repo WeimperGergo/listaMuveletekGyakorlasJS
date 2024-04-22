@@ -17,24 +17,28 @@
         <input type="text" name="szuro" id="szuro">
     </div>
     <div id="urlap">
-        <form action="/action_page.php">
+        <form class="was-validated">
             <div class="mb-3 mt-3">
               <label for="nev" class="form-label">Név:</label>
-              <input type="text" class="form-control" id="nev" placeholder="RókaRudi" name="nev">
+              <input type="text" class="form-control" id="nev" required pattern="^[A-Z][a-zA-Z ]{3,}$" placeholder="RókaRudi" name="nev">
+              <div class="valid-feedback">Ok.</div>
+              <div class="invalid-feedback">Kötelező mező.</div>
             </div>
             <div class="mb-3">
               <label for="kor" class="form-label">Kor:</label>
-              <input type="number" class="form-control" id="kor" min="0" max="120" name="kor">
+              <input type="number" class="form-control" id="kor" required min="0" max="120" name="kor">
+              <div class="valid-feedback">Ok.</div>
+              <div class="invalid-feedback">Kötelező mező.</div>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" id="ferfi" name="nem" value="ferfi" checked>
-                <label class="form-check-label">Férfi</label>
+            <div class="form-check row">
+                <input class="form-check-input col-sm-6" type="radio" id="ferfi" name="nem" value="ferfi" checked>
+                <label class="form-check-label col-sm-6">Férfi</label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" id="no" name="nem" value="no" checked>
-                <label class="form-check-label">Nő</label>
+            <div class="form-check row">
+                <input class="form-check-input col-sm-6" type="radio" id="no" name="nem" value="no">
+                <label class="form-check-label col-sm-6">Nő</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
           </form>
     </div>
     <div class="adatok">
